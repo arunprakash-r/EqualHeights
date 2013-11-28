@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Equal Heights</title>
+<style>
+.leftClmn {
+	float: left;
+	width: 200px;
+	height: 300px;
+	background-color: #C00;
+	margin-right: 20px;
+}
+.rightClmn {
+	float: left;
+	width: 200px;
+	height: 500px;
+	background-color: #909;
+}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+	var leftHeight = $(".leftClmn").height();
+	var rightHeight = $(".rightClmn").height();
+	if (leftHeight > rightHeight){
+		$(".rightClmn").height(leftHeight);
+	}
+	else{
+		$(".leftClmn").height(rightHeight);
+	};
+})
+</script>
+</head>
+
+<body>
+<h3>Replace the div classes (leftClmn and rightClmn) used in jQuery to the one you use in your project.</h3>
+
+<div class="leftClmn"></div>
+
+<div class="rightClmn"></div>
+
+</body>
+</html>
